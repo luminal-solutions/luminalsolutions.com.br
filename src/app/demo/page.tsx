@@ -53,86 +53,17 @@ export default function DemoRequestPage() {
             Fale Conosco
           </h1>
           <p className="text-center text-gray-500 mb-8">
-            Preencha o formulário abaixo e entraremos em contato com você o mais
-            breve possível.
+            Entre em contato conosco diretamente através do nosso e-mail e retornaremos o mais breve possível.
           </p>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div>
-              <label className="block text-sm font-medium mb-1">Nome</label>
-              <input
-                type="text"
-                name="name"
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8CAFFF]"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-1">E-mail</label>
-              <input
-                type="email"
-                name="email"
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8CAFFF]"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-1">Celular</label>
-              <input
-                type="tel"
-                name="phone"
-                required
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8CAFFF]"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-1">
-                Empresa (opcional)
-              </label>
-              <input
-                type="text"
-                name="company"
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8CAFFF]"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-1">Mensagem</label>
-              <textarea
-                name="message"
-                rows={4}
-                placeholder="Conte-nos um pouco sobre sua necessidade..."
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8CAFFF]"
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={isLoading}
-              className={`w-full py-3 rounded-lg font-semibold text-white transition ${isLoading
-                  ? "bg-gray-300 cursor-not-allowed"
-                  : "bg-gradient-to-r from-[#FFE566] to-[#3F87F5] hover:opacity-90"
-                }`}
+          <div className="flex justify-center">
+            <a
+              href="mailto:luminalcontato@gmail.com"
+              className="px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-[#FFE566] to-[#3F87F5] rounded-xl hover:opacity-90 transition shadow-lg"
             >
-              {isLoading ? "Enviando..." : "Enviar mensagem"}
-            </button>
-
-            {status === "success" && (
-              <p className="text-center text-green-600 mt-3 font-medium">
-                Solicitação enviada com sucesso! Entraremos em contato em breve
-                :)
-              </p>
-            )}
-
-            {status === "error" && (
-              <p className="text-center text-red-600 mt-3 font-medium">
-                Algo deu errado. Tente novamente.
-              </p>
-            )}
-          </form>
+              Enviar E-mail
+            </a>
+          </div>
         </div>
       </div>
     </>
